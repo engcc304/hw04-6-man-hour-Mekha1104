@@ -36,13 +36,13 @@ int main() {
     float workingHour,SalaryperHour ;
 
     //รับข้อมูลจากผู้ใช้
-    printf( "Input the Employees ID(Max. 10 chars):\n" ) ;
+    printf( "Input the Employees ID(Max. 10 chars): " ) ;
     scanf( "%s" , EmployeesID ) ;
 
-    printf("Input the working hrs : \n" ) ;
+    printf("Input the working hrs : " ) ;
     scanf( "%f" , &workingHour ) ;
 
-    printf( "Sarary amount/hr : \n" ) ;
+    printf( "Sarary amount/hr : " ) ;
     scanf("%f" , &SalaryperHour ) ;
 
     //คำนวณเงินเดือน
