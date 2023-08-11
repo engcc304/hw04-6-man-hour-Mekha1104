@@ -36,7 +36,7 @@ int main() {
     float workingHour,SalaryperHour ;
 
     //รับข้อมูลจากผู้ใช้
-    printf( "Input the Employees ID(Max. 10 chars): " ) ;
+    printf( "Input the Employees ID(Max. 10 chars) : " ) ;
     scanf( "%s" , EmployeesID ) ;
 
     printf("Input the working hrs : " ) ;
