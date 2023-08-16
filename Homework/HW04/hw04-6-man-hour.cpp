@@ -29,13 +29,14 @@
 */
 
 #include <stdio.h>
+#include <string.h>
 
 int main() {
-    int employeeId;
+    char employeeId[11]; // สำหรับเก็บรหัสประจำตัวพนักงาน (พร้อมที่จองเพื่อรองรับ null-terminator)
     float hoursWorked, hourlyRate;
     
-    printf("Enter employee ID: ");
-    scanf("%d", &employeeId);
+    printf("Enter employee ID (max 10 characters): ");
+    scanf("%10s", employeeId);
     
     printf("Enter hours worked: ");
     scanf("%f", &hoursWorked);
@@ -45,7 +46,7 @@ int main() {
     
     float salary = hoursWorked * hourlyRate;
     
-    printf("Employee ID: %d\n", employeeId);
+    printf("Employee ID: %s\n", employeeId);
     printf("Total Salary: %.2f\n", salary);
     
     return 0;
