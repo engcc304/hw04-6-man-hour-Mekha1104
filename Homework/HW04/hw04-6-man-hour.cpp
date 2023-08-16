@@ -27,29 +27,33 @@
         Employees ID = 0000500349
         Salary = U$ 374,000.00
 */
-
 #include <stdio.h>
-#include <locale.h>
-
+void commaprint(int number) {
+    if (number < 1000) {
+        printf("%d", number);
+        return;
+    }
+    commaprint(number / 1000);
+    printf(",%03d", number % 1000);
+}
 int main() {
-    setlocale(LC_ALL, "");
-
-    char employeeId[11];
-    float hoursWorked, hourlyRate;
-
-    printf("Input the Employees ID(Max. 10 chars): ");
-    scanf("%10s", employeeId);
-
-    printf("Input the working hrs: ");
-    scanf("%f", &hoursWorked);
-
-    printf("Salary amount/hr: ");
-    scanf("%f", &hourlyRate);
-
-    float salary = hoursWorked * hourlyRate;
-
-    printf("Employees ID = %s\n", employeeId);
-    printf("Salary = U$ %.2f\n", salary);
+    char id[10];
+    float timework;
+    float money;
+    printf("Test case: \n");
+    printf("Input the Employees ID (Max. 10 chars)s:\n");
+    scanf("%s", &id);
+    printf("Input the working hrs:\n");
+    scanf("%f", &timework);
+    printf("Salary amount/hr:\n");
+    scanf("%f", &money);
+    float sum;
+    sum = timework * money;
+    printf("Output: \n");
+    printf("Expected Output:\nEmployees ID = %s\n", id);
+    printf("Salary = U$ ");
+    commaprint((int)sum);
+    printf(".%02d", (int)(sum * 100) % 100);
 
     return 0;
 }
