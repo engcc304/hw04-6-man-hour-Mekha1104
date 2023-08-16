@@ -31,27 +31,22 @@
 #include <stdio.h>
 
 int main() {
-
-    char EmployeesID[10] ;
-    float workingHour,SalaryperHour ;
-
-    //รับข้อมูลจากผู้ใช้
-    printf( "Input the Employees ID(Max. 10 chars) : " ) ;
-    scanf( "%s" , EmployeesID ) ;
-
-    printf("Input the working hrs : " ) ;
-    scanf( "%f" , &workingHour ) ;
-
-    printf( "Sarary amount/hr : " ) ;
-    scanf("%f" , &SalaryperHour ) ;
-
-    //คำนวณเงินเดือน
-    float Salary = workingHour * SalaryperHour ;
-
-    //เเสดงผลลัพธิ์
-    printf( "Employees ID = %s \n" , EmployeesID ) ;
-    printf( "Salary = U$ %0.2f \n" , Salary ) ;
-
-    return 0 ;
-
+    int employeeId;
+    float hoursWorked, hourlyRate;
+    
+    printf("Enter employee ID: ");
+    scanf("%d", &employeeId);
+    
+    printf("Enter hours worked: ");
+    scanf("%f", &hoursWorked);
+    
+    printf("Enter hourly rate: ");
+    scanf("%f", &hourlyRate);
+    
+    float salary = hoursWorked * hourlyRate;
+    
+    printf("Employee ID: %d\n", employeeId);
+    printf("Total Salary: %.2f\n", salary);
+    
+    return 0;
 }
