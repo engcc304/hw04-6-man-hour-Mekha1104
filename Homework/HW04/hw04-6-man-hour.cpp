@@ -29,25 +29,27 @@
 */
 
 #include <stdio.h>
-#include <string.h>
+#include <locale.h>
 
 int main() {
-    char employeeId[11]; // สำหรับเก็บรหัสประจำตัวพนักงาน (พร้อมที่จองเพื่อรองรับ null-terminator)
+    setlocale(LC_ALL, "");
+
+    char employeeId[11];
     float hoursWorked, hourlyRate;
-    
-    printf("Enter employee ID (max 10 characters): ");
+
+    printf("Input the Employees ID(Max. 10 chars): ");
     scanf("%10s", employeeId);
-    
-    printf("Enter hours worked: ");
+
+    printf("Input the working hrs: ");
     scanf("%f", &hoursWorked);
-    
-    printf("Enter hourly rate: ");
+
+    printf("Salary amount/hr: ");
     scanf("%f", &hourlyRate);
-    
+
     float salary = hoursWorked * hourlyRate;
-    
-    printf("Employee ID: %s\n", employeeId);
-    printf("Total Salary: %.2f\n", salary);
-    
+
+    printf("Employees ID = %s\n", employeeId);
+    printf("Salary = U$ %.2f\n", salary);
+
     return 0;
 }
